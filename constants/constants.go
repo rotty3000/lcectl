@@ -16,6 +16,7 @@ var Const = struct {
 	RepoBranch                     string
 	RepoSync                       string
 	TlsLfrdevDomain                string
+	Verbose                        int8
 }{
 	CETypesEtag:                    "cetypes.etag",
 	CETypesFile:                    "cetypes.file",
@@ -32,4 +33,5 @@ var Const = struct {
 	RepoBranch:                     "localdev.resources.branch",
 	RepoSync:                       "localdev.resources.sync",
 	TlsLfrdevDomain:                "tls.lfrdev.domain",
+	Verbose:                        1,
 }

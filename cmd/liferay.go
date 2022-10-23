@@ -64,7 +64,7 @@ func init() {
 	// will be global for your application.
 
 	liferayCmd.PersistentFlags().StringVar(&flags.ConfigFile, "config", "", "config file (default is $HOME/.liferay/cli.yaml)")
-	liferayCmd.PersistentFlags().BoolVarP(&flags.Verbose, "verbose", "v", false, "enable verbose output")
+	liferayCmd.PersistentFlags().VarP(flags.ToOutput(0, &flags.Verbose), "verbose", "v", "enable verbose output")
 
 	// add sub-commands
 	config.AddConfigCmd(liferayCmd)

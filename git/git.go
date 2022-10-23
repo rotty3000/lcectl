@@ -15,6 +15,7 @@ import (
 	"github.com/spf13/viper"
 	"liferay.com/liferay/cli/ansicolor"
 	"liferay.com/liferay/cli/constants"
+	"liferay.com/liferay/cli/flags"
 )
 
 func init() {
@@ -30,7 +31,7 @@ func init() {
 	viper.SetDefault(constants.Const.RepoSync, true)
 }
 
-func SyncGit(verbose bool) {
+func SyncGit(verbose flags.Output) {
 	if repoSync := viper.GetBool(constants.Const.RepoSync); !repoSync {
 		return
 	}
